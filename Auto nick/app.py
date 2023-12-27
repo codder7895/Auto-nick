@@ -10,7 +10,7 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    if message.channel.id == 1189510689849614366:
+    if message.channel.id == config.CH_id:
         member = message.guild.get_member(message.author.id)
         await member.edit(nick=message.content)
 
